@@ -38,10 +38,6 @@ public class TestUser {
                 .log().all();
     }
 
-    @Test
-    public void deleteRequest(){
-//        baseURI =
-    }
 
     @Test
     public void patchRequest(){
@@ -83,7 +79,17 @@ public class TestUser {
                 .then()
                 .statusCode(200)
                 .log().all();
+    }
 
+    @Test
+    public void deleteRequest(){
+        baseURI = "http://localhost:3000";
+
+        when()
+                .delete("/users/4")
+                .then()
+                .statusCode(200)
+                .log().all();
 
     }
 }
