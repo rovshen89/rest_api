@@ -2,6 +2,7 @@ package TestLocal;
 
 import io.restassured.http.ContentType;
 import org.json.simple.JSONObject;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import static io.restassured.RestAssured.*;
 
@@ -36,6 +37,7 @@ public class TestUser {
                 .then()
                 .statusCode(201)
                 .log().all();
+
     }
 
 
